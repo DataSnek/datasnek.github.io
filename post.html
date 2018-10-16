@@ -81,13 +81,25 @@
 
             <p>Another interesting thing happening today is the huge prevalence of Social Media. Never before has there been so much information being self reported by humans in text form and as we saw in the 2016 election this information can have a lot of power. As you will see shortly there is also a certain amount of sensitivity involved in accessing information from Twitter or any other Social Media site. This post is not going to discuss the implications this kind of information but it is worth mentioning it before we look at how to access the Twitter API using the Tweepy.
 
-            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described here “https://apps.twitter.com/”.
+            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described here “https://apps.twitter.com/”. Once you have the correct authorization keys you can input them into these varibles.
+              <script
+              src="https://gist.github.com/DataSnek/70bad41b5905efb3a1a72ac0919a15b7.js">
+              </script>
+
+             <p>Using this function we can take a Twitter username and turn it into a dataframe. The Tweepy package makes this possible http://docs.tweepy.org/en/v3.5.0/.
+
               <script
               src="https://gist.github.com/DataSnek/c5503e6c626083370571dbced3ffde52.js">
               </script>
 
+              <p>Let’s look at Elon Musk’s Tweets.
+                <script src="https://gist.github.com/DataSnek/d8e107219480084574f51f5a64874184.js"></script>
+                <p>The output:
+                <script src="https://gist.github.com/DataSnek/996eea89898975dc753b1e97d221e127.js"></script>
+                <p> Now looking at the .head() of the dataframe
 
-    
+
+                  
             <h2 class="section-heading">The Final Frontier</h2>
 
             <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
