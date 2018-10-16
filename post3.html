@@ -80,8 +80,10 @@
               <li><a href="post2.html">second post</a>
             </ul>
 
-            <p>Post 3
-            <p>When you look at the state of Natural Language Processing today there is a lot of buzz surrounding context aware products and services. In many ways NLP with its uses in language aware and responsive products has become the most ubiquitous aspect of “AI” in our modern life. We talk to chatbots online when we shop, tell a digital assistant what topic we are calling about and tell Alexa to play Despacito. While these things seem relatively new to the consumer a lot of the basics behind NLP are not at all new. The fact that the turing test was proposed by Alan Turing in 1950 gives us a sense of how long the idea of a contextually aware program that can respond has been around. The real difference that has accelerated the field today is the abundance of computational power and the maturation of Machine Learning as a discipline.
+            <p>When doing Natural Language Processing the researcher may want to be able to use automated techniques to determine the sentiment of the text. Luckily for us one of the many tools available in the Natural Language Toolkit http://www.nltk.org/  is the VADER Sentiment Analyser module. The VADER (Valence Aware Dictionary and sEntiment Reasoner https://pypi.org/project/vaderSentiment/) is lexicon and rule-based analysis tool that is essentially for looking at Social Media and even takes into account Emojis! Let’s look at how we can use this tool.
+
+            <p>In the previous blog I collected Twitter data into a dataframe using Tweepy and now we will use the SentimentAnalyzer (http://www.nltk.org/howto/sentiment.html) module to create 3 columns for the results of the sentiment analysis for that Tweet.  For this blog I made a smaller dataframe (less columns) for clarity and I used the Wendy’s Twitter account for analysis. This account is famous for being very vocal and somewhat insulting despite it’s corporate ownership. Once we have the dataframe we can make a function to analyze the Tweets made by this account. Wendy’s made 3400 Tweets in one month with a total of 150K tweets!
+
 
             <p>Another interesting thing happening today is the huge prevalence of Social Media. Never before has there been so much information being self reported by humans in text form and as we saw in the 2016 election this information can have a lot of power. As you will see shortly there is also a certain amount of sensitivity involved in accessing information from Twitter or any other Social Media site. This post is not going to discuss the implications this kind of information but it is worth mentioning it before we look at how to access the Twitter API using the Tweepy.
 
@@ -108,33 +110,8 @@
 
                   <img src="img/head.jpg" alt="Pandas DataFrame">
 
-                  <p> Next we take this data and do some sentiment amalysis!
+                  <p> Next we take some Twitter data and do some sentiment amalysis in the following blog!
 
-
-
-            <h2 class="section-heading">The Final Frontier</h2>
-
-
-
-            <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-
-            <h2 class="section-heading">Reaching for the Stars</h2>
-
-            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-            <a href="#">
-              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
-            </a>
-            <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-
-            <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-            <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-            <p>Placeholder text by
-              <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-              <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
           </div>
         </div>
       </div>
