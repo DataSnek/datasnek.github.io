@@ -28,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.html">DataSne</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -60,10 +60,10 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
               <h1>Utilizing the Tweepy Package to Access the Twitter API</h1>
-              <h2 class="subheading">Turning chatter into data...</h2>
+              <h2 class="subheading">Data Collection for NLP</h2>
               <span class="meta">Posted by
-                <a href="#">Andreas</a>
-                on Oct 2, 2018</span>
+                <a href="#">Andreas Taylor</a>
+                on Oct 12, 2018</span>
             </div>
           </div>
         </div>
@@ -75,40 +75,45 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p>This is the first blog post in a series on NLP, web scraping and Machine Learning. We will be accessing the Twitter API and then turning the data into a Pandas DataFrame.
+            <p>This is the first blog post in a series on web scaping, NLP and topic modeling. We will be accessing the Twitter API with the Tweepy(<a href="url">http://docs.tweepy.org/en/v3.5.0/</a> package and then turning the data into a Pandas DataFrame.
 
-            <p>When you look at Natural Language Processing today there is a lot of buzz surrounding context aware products and services. In fact NLP with its uses in language aware and responsive products has become the most ubiquitous aspect of “AI” in our modern life. We talk to chatbots online when we shop, tell a digital assistant what topic we are calling about and tell Alexa to play Despacito. While these things seem relatively new to the consumer a lot of the basics behind NLP are not at all new. The fact that the turing test was proposed by Alan Turing in 1950 gives us a sense of how long the idea of a contextually aware program that can respond has been around. The real difference that has accelerated the field today is the abundance of computational power and the maturation of Machine Learning as a discipline.
+            <p>When you look at the state of Natural Language Processing today there is a lot of buzz surrounding context aware products and services. In many ways NLP with its uses in language aware and responsive products has become the most ubiquitous aspect of “AI” in our modern life. We talk to chatbots online when we shop, tell a digital assistant what topic we are calling about and tell Alexa to play Despacito. While these things seem relatively new to the consumer a lot of the basics behind NLP are not at all new. The fact that the turing test was proposed by Alan Turing in 1950 gives us a sense of how long the idea of a contextually aware program that can respond has been around. The real difference that has accelerated the field today is the abundance of computational power and the maturation of Machine Learning as a discipline.
 
             <p>Another interesting thing happening today is the huge prevalence of Social Media. Never before has there been so much information being self reported by humans in text form and as we saw in the 2016 election this information can have a lot of power. As you will see shortly there is also a certain amount of sensitivity involved in accessing information from Twitter or any other Social Media site. This post is not going to discuss the implications this kind of information but it is worth mentioning it before we look at how to access the Twitter API using the Tweepy.
 
-            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described here “https://apps.twitter.com/”. Once you have the correct authorization keys you can input them into these varibles.
-              <script
+            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described here <a href="url">https://apps.twitter.com/</a>. You need to write a 300 word description of your intended use and make an "app" Once you have the correct authorization keys you can input them into these varibles.
+
               src="https://gist.github.com/DataSnek/70bad41b5905efb3a1a72ac0919a15b7.js">
               </script>
 
-             <p>Using this function we can take a Twitter username and turn it into a dataframe. The Tweepy package makes this possible http://docs.tweepy.org/en/v3.5.0/.
+             <p>Using this function we can take a Twitter username and turn it into a dataframe.
 
               <script
               src="https://gist.github.com/DataSnek/c5503e6c626083370571dbced3ffde52.js">
               </script>
 
               <p>Let’s look at Elon Musk’s Tweets.
+
                 <script src="https://gist.github.com/DataSnek/d8e107219480084574f51f5a64874184.js"></script>
+
                 <p>The output:
+
                 <script src="https://gist.github.com/DataSnek/996eea89898975dc753b1e97d221e127.js"></script>
+
                 <p> Now looking at the .head() of the dataframe
 
+                  <img src="head.jpg" alt="Pandas DataFrame">
 
-                  
+                  <p> Next we take this data and do some sentiment amalysis!
+
+
+
             <h2 class="section-heading">The Final Frontier</h2>
 
-            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
 
-            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
 
             <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
 
-            <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
 
             <h2 class="section-heading">Reaching for the Stars</h2>
 
