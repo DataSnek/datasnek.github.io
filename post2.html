@@ -82,21 +82,27 @@
 
             <p>When doing Natural Language Processing the researcher may want to be able to use automated techniques to determine the sentiment of the text. Luckily for us one of the many tools available in the <a href="https://pypi.org/project/vaderSentiment/">Natural Language Toolkit</a> is the VADER Sentiment Analyser module. The VADER (Valence Aware Dictionary and sEntiment Reasoner) is lexicon and rule-based analysis tool that is essentially for looking at Social Media and even takes into account Emojis! Let’s look at how we can use this tool.
 
-             <p>In the previous blog I collected Twitter data into a dataframe using Tweepy and now we will use the SentimentAnalyzer (http://www.nltk.org/howto/sentiment.html) module to create 4 columns for the results of the sentiment analysis for that Tweet.  For this blog I made a smaller dataframe (less columns) for clarity and I used the Wendy’s Twitter account for analysis. This account is famous for being very vocal and somewhat insulting despite it’s corporate ownership. Once we have the dataframe we can make a function to analyze the Tweets made by this account. Wendy’s made 3210 Tweets in one month with a total of 150K tweets! That’s 100 Tweets a day and it seems like that might be more like a team of people than a single account holder.
+              <p>In the previous blog I collected Twitter data into a dataframe using Tweepy and now we will use the SentimentAnalyzer module to create 4 columns for the results of the sentiment analysis for that Tweet.  For this blog I made a smaller dataframe (less columns) for clarity and I used the Wendy’s Twitter account for analysis. This account is famous for being very vocal and somewhat insulting despite it’s corporate ownership. Once we have the dataframe we can make a function to analyze the Tweets made by this account. Wendy’s made 3210 Tweets in one month with a total of 150K tweets! That’s 100 Tweets a day and it seems like that might be more like a team of people than a single account holder.
 
-            <p<script src="https://gist.github.com/DataSnek/d840e23c7daa25e1189ee76c92326813.js"></script>
+               <p<script src="https://gist.github.com/DataSnek/d840e23c7daa25e1189ee76c92326813.js"></script>
 
-               <p>Now let’s look at the dataframe
+                <p>Now let’s look at the dataframe
 
-              <img src="img/wendys_head.jpg" alt="Pandas DataFrame">
+                 <img src="img/head_wendys.jpg" alt="Pandas DataFrame">
 
-                 <p>Next we need to create a function that analyzes the sentiment of every Tweet’s text and makes a column in the dataframe for it the amount positive, negative and neutral. But first let’s look at how the sentiment module works outside of the function.
+                  <p>Next we need to create a function that analyzes the sentiment of every Tweet’s text and makes a column in the dataframe for it the amount positive, negative and neutral. But first let’s look at how the sentiment module works outside of the function.
 
-                <script src="https://gist.github.com/DataSnek/2200dea6ada8f319e1fc5b33ed32cb19.js"></script>
+                   <script src="https://gist.github.com/DataSnek/2200dea6ada8f319e1fc5b33ed32cb19.js"></script>
 
-                   <p>The analyzer gives you a value for “compound” which is the amount of detected polarity. Now the next step is to put the values into a dataframe. We simply need to go down the column and get these values for a single row, then put this into an array which we pop into the dataframe at the very end.
+                    <p>Along with the positive, negative and neutrality scores the  analyzer gives you a value for “compound” which is the amount of detected polarity. Now the next step is to put the values into a dataframe. We simply need to go down the column and get these 4 values for a single row, then put them into arrays which we put into the dataframe at the very end.
 
-                 <script src="https://gist.github.com/DataSnek/f663496c840118f58d42d96508f8b118.js"></script>
+                     <script src="https://gist.github.com/DataSnek/f663496c840118f58d42d96508f8b118.js"></script>
+
+                      <p> Now lets look at the scores
+
+                       <img src="img/wen_frame.jpg" alt="Pandas DataFrame">
+
+                       <p> In the next blog we will be looking at Twitter again for graphing network connections!
 
           </div>
         </div>
