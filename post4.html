@@ -59,8 +59,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
-              <h1>Utilizing the Tweepy Package to Access the Twitter API</h1>
-              <h2 class="subheading">Data Collection for NLP</h2>
+              <h1>t-SNE clustering for Visualizing User Tweets</h1>
+              <h2 class="subheading">Finding potentially automated user accounts </h2>
               <span class="meta">Posted by
                 <a href="#">Andreas Taylor</a>
                 on Oct 12, 2018</span>
@@ -76,7 +76,22 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
 
-            <p>This is the first blog post in a series on web scaping, NLP and topic modeling. We will be accessing the Twitter API with the <a href="http://docs.tweepy.org/en/v3.5.0/">Tweepy</a> package and then turning the data into a Pandas DataFrame.
+            <p>The next step in our exploration of Twitter data is to use unsupervised clustering for a qualitative analysis of a users overall activity and then eventually for topic modeling.
+
+            <p>In order to look at vectorized word data a dimensionality reduction is performed using t-distributed stochastic neighbor embedding(t-SNE). It is a 2D representation of a multi-dimensional dataset. The unique shape of each plot gives us information about how this person directs and words their comments. Small outer clusters represent very unique topics. The result is like a person’s Twitter finger print. This method is helpful in a qualitative sense but the calculations involved in the dimensionality reduction for t-SNE are so costly.
+
+              <p>We can take a list of users tweets and conduct t-SNE using this code:
+
+              <script src="https://gist.github.com/DataSnek/b312bb11c3699e7f148013f2d08cde95.js"></script>
+
+              <p>Here is an example of 6 user account tweet visualized by this process.
+
+                <img src="img/tSNE.jpg" alt="t-SNE">
+
+
+
+
+
 
             <p>When you look at the state of Natural Language Processing today there is a lot of buzz surrounding context aware products and services. In many ways NLP with its uses in language aware and responsive products has become the most ubiquitous aspect of “AI” in our modern life. We talk to chatbots online when we shop, tell a digital assistant what topic we are calling about and tell Alexa to play Despacito. While these things seem relatively new to the consumer a lot of the basics behind NLP are not at all new. The fact that the turing test was proposed by Alan Turing in 1950 gives us a sense of how long the idea of a contextually aware program that can respond has been around. The real difference that has accelerated the field today is the abundance of computational power and the maturation of Machine Learning as a discipline.
 
