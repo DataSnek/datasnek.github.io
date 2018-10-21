@@ -53,115 +53,38 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/main.jpg')">
+    <header class="masthead" style="background-image: url('img/netxy.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Andreas' Data Science Blog</h1>
-              <span class="subheading">The DataSnek Homepage<span>
+            <div class="post-heading">
+              <h1>Latent Dirichlet Allocation¶</h1>
+              <h2 class="subheading">Topic Modeling</h2>
+              <span class="meta">Posted by
+                <a href="#">Andreas Taylor</a>
+                on Oct 12, 2018</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Using Tweepy to Access the Twitter API
-              <!--</h2>-->
-              <h3 class="post-subtitle">
-                Data Collection for NLP
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 13, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post2.html">
-            <h2 class="post-title">
-                Sentiment Analysis with NLTK
-                <!--</h2>-->
-                <h3 class="post-subtitle">
-                  with the Vader Lexicon
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 18, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post3.html">
-              <h2 class="post-title">
-                Social Network Analysis
-              <!--</h2>-->
-              <h3 class="post-subtitle">
-                Graphing social connections with NetworkX
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 13, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post4.html">
-              <h2 class="post-title">
-                t-SNE clustering for Visualizing User Tweets
-              <!--</h2>-->
-              <h3 class="post-subtitle">
-                Finding potentially automated user accounts
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 13, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post3.html">
-              <h2 class="post-title">
-                Social Network Analysis
-              <!--</h2>-->
-              <h3 class="post-subtitle">
-                Graphing social connections with NetworkX
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 13, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post5.html">
-              <h2 class="post-title">
-                t-SNE clustering for Visualizing User Tweets
-              <!--</h2>-->
-              <h3 class="post-subtitle">
-                Finding potentially automated user accounts
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Andreas Taylor</a>
-              on September 13, 2018</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <p>In the last blog we saw how we can look at clustered Tweet data for some qualitative analysis but what if we want to know what the clusters represent? For this we need to use another unsupervised modeling technique such as Latent Dirichlet allocation. The output is groups of words from what the model has identified as topics. The most important parameter to set beforehand is the number of topics and this is pretty subjective. The whole idea is we don’t know much about the corpus we are looking into so clearly we wouldn’t know the exact number of topics. Different people would probably select different cutoffs. For the model there is a balance between worrying about parameters and the utility of the model.
+               <p>First we take the Tweets from the previous posts and count vectorize them.
+
+                 <script src="https://gist.github.com/DataSnek/61b18de24c88032ca9ff76c33fe15ba2.js"></script>
+
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
