@@ -53,7 +53,7 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/twitter.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -80,37 +80,18 @@
               <li><a href="post2.html">second post</a>
             </ul>
 
-            <p>When doing Natural Language Processing the researcher may want to be able to use automated techniques to determine the sentiment of the text. Luckily for us one of the many tools available in the Natural Language Toolkit http://www.nltk.org/  is the VADER Sentiment Analyser module. The VADER (Valence Aware Dictionary and sEntiment Reasoner https://pypi.org/project/vaderSentiment/) is lexicon and rule-based analysis tool that is essentially for looking at Social Media and even takes into account Emojis! Let’s look at how we can use this tool.
+            <p>In this blog I will be drawing some network connectivity graphs by first collecting user mentions from Twitter then turning them into nodes and graphing using https://networkx.github.io/ . First I will be getting the tweets from my first blog <a href="post1.html">first post</a><br> to  and then filter out the top 20 mentions of other users then go to their account and grab their top 20 mentions of other users and so on. Then I graph these connections and look at the overall picture. In network visualization you can see how interconnected and “central” a user is as an indicator of the person’s social influence. There are lots of other types of things you can infer from network graphs for instance graphing “fake” spam Twitter accounts controlled by the same entity usually shows little interconnectivity. Trends emerge for people that use their account for promoting business, personal use, marketing porn sites and many more.
 
-            <p>In the previous blog I collected Twitter data into a dataframe using Tweepy and now we will use the SentimentAnalyzer (http://www.nltk.org/howto/sentiment.html) module to create 3 columns for the results of the sentiment analysis for that Tweet.  For this blog I made a smaller dataframe (less columns) for clarity and I used the Wendy’s Twitter account for analysis. This account is famous for being very vocal and somewhat insulting despite it’s corporate ownership. Once we have the dataframe we can make a function to analyze the Tweets made by this account. Wendy’s made 3400 Tweets in one month with a total of 150K tweets!
+              <script src="https://gist.github.com/DataSnek/f8d06e0bd48def70cef28b63c3439996.js"></script>
 
+            <p>Once you run this you will have a list of top mentions and their frequency. The function also makes this graph:
 
-            <p>Another interesting thing happening today is the huge prevalence of Social Media. Never before has there been so much information being self reported by humans in text form and as we saw in the 2016 election this information can have a lot of power. As you will see shortly there is also a certain amount of sensitivity involved in accessing information from Twitter or any other Social Media site. This post is not going to discuss the implications this kind of information but it is worth mentioning it before we look at how to access the Twitter API using the Tweepy.
+              <img src="img/freq.jpg" alt="Mentions">
 
-            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described here <a href="url">https://apps.twitter.com/</a>. You need to write a 300 word description of your intended use and make an "app" Once you have the correct authorization keys you can input them into these varibles.
+              <p>Now we use this function to get a dictionary of user mentions for all the top mentions from the first user and make a dictionary.
 
-              src="https://gist.github.com/DataSnek/70bad41b5905efb3a1a72ac0919a15b7.js">
-              </script>
+                <script src="https://gist.github.com/DataSnek/335f9936b92ce171a44b58f9c4dac72a.js"></script>
 
-             <p>Using this function we can take a Twitter username and turn it into a dataframe.
-
-              <script
-              src="https://gist.github.com/DataSnek/c5503e6c626083370571dbced3ffde52.js">
-              </script>
-
-              <p>Let’s look at Elon Musk’s Tweets.
-
-                <script src="https://gist.github.com/DataSnek/d8e107219480084574f51f5a64874184.js"></script>
-
-                <p>The output:
-
-                <script src="https://gist.github.com/DataSnek/996eea89898975dc753b1e97d221e127.js"></script>
-
-                <p> Now looking at the .head() of the dataframe
-
-                  <img src="img/head.jpg" alt="Pandas DataFrame">
-
-                  <p> Next we take some Twitter data and do some sentiment amalysis in the following blog!
 
           </div>
         </div>
