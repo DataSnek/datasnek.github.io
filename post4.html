@@ -90,41 +90,13 @@
 
                 <p>The grouping of the bunches is calculated by the words in a sentence and their position in a vectorized multidimensional space. What is interesting is that the right middle graph looks totally different. Something about this users Tweets is more uniformly distributed. I am willing to be it is automated and maybe in a later blog I will investigate this.
 
+                  <p>Detecting automated accounts that are behaving outside of the the bounds of the allowable automated behavior has become somewhat of an art form. If you are not familiar with the Twitter API there is actually a large amount of allowable automation. But still influencers try to use these platforms for political and economic reasons and a constant arms race between those wanting to automate accounts inappropriately and those trying to detect them rages on. Utilizing unique and creative applications of ML tools has lead to the ability to identify these types of accounts.
 
 
 
 
 
-            <p>When you look at the state of Natural Language Processing today there is a lot of buzz surrounding context aware products and services. In many ways NLP with its uses in language aware and responsive products has become the most ubiquitous aspect of “AI” in our modern life. We talk to chatbots online when we shop, tell a digital assistant what topic we are calling about and tell Alexa to play Despacito. While these things seem relatively new to the consumer a lot of the basics behind NLP are not at all new. The fact that the turing test was proposed by Alan Turing in 1950 gives us a sense of how long the idea of a contextually aware program that can respond has been around. The real difference that has accelerated the field today is the abundance of computational power and the maturation of Machine Learning as a discipline.
-
-            <p>Another interesting thing happening today is the huge prevalence of Social Media. Never before has there been so much information being self reported by humans in text form and as we saw in the 2016 election this information can have a lot of power. As you will see shortly there is also a certain amount of sensitivity involved in accessing information from Twitter or any other Social Media site. This post is not going to discuss the implications this kind of information but it is worth mentioning it before we look at how to access the Twitter API using the Tweepy.
-
-            <p>The first thing to do before getting started is to have a Twitter Developer account. You will need to set up OAuthorization as described <a href="https://apps.twitter.com/"> here</a>. You need to write a 300 word description of your intended use and make an "app" following the directions. <a href="https://themepacific.com/how-to-generate-api-key-consumer-token-access-key-for-twitter-oauth/994/">Here</a> is another explaination of this process. Once you have the correct authorization keys you can input them into these varibles.
-
-              <script
-              src="https://gist.github.com/DataSnek/70bad41b5905efb3a1a72ac0919a15b7.js">
-              </script>
-
-             <p>Using this function we can take a Twitter username and turn it into a dataframe.
-
-              <script
-              src="https://gist.github.com/DataSnek/c5503e6c626083370571dbced3ffde52.js">
-              </script>
-
-              <p>Let’s look at Elon Musk’s Tweets.
-
-                <script src="https://gist.github.com/DataSnek/d8e107219480084574f51f5a64874184.js"></script>
-
-                <p>The output:
-
-                <script src="https://gist.github.com/DataSnek/996eea89898975dc753b1e97d221e127.js"></script>
-
-                <p> Now looking at the .head() of the dataframe
-
-                  <img src="img/elon_head.jpg" alt="Pandas DataFrame">
-
-                  <p> Next we take this data and do some sentiment amalysis!
-
+    
 
 
 
