@@ -78,11 +78,24 @@
 
             <p>In the last blog we saw how we can look at clustered Tweet data for some qualitative analysis but what if we want to know what the clusters represent? For this we need to use another unsupervised modeling technique such as Latent Dirichlet allocation. The output is groups of words from what the model has identified as topics. The most important parameter to set beforehand is the number of topics and this is pretty subjective. The whole idea is we don’t know much about the corpus we are looking into so clearly we wouldn’t know the exact number of topics. Different people would probably select different cutoffs. For the model there is a balance between worrying about parameters and the utility of the model.
 
-               <p>First we take the Tweets from the previous posts and count vectorize them.
+               <p>First we take the Tweets from the previous posts and count vectorize them.<p>
 
                  <script src="https://gist.github.com/DataSnek/61b18de24c88032ca9ff76c33fe15ba2.js"></script>
 
-                 <script src="https://gist.github.com/DataSnek/fccea4df10787e5db8f7a38aedec1136.js"></script>
+                 <p>With this done we just feed the vectorized words into the LDA model. Let's start with 10 topics and look at the results. The model returns top words for subjects found in the corpus. For those who are used to looking at model performance with metrics like accuracy and error the output of LDA can be frustrating. You can do types of error analysis but it’s easy to feel completely disconnected from the process. It is unsupervised learning and topics hold a certain amount of subjectivity.
+
+                 <script src="https://gist.github.com/DataSnek/e048bf7b9b269c8227dd0a301ae155d0.js"></script>
+
+                <p>These are the top words:
+
+                            <p><img src="img/10topics.jpg" alt="Ten Topics">
+
+                    <p>Now let’s try 20 topics.
+
+                      <p><img src="img/20topics.jpg" alt="Twenty Topics">
+
+
+
 
           </div>
         </div>
